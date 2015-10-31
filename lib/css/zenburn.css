@@ -3,7 +3,7 @@ Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
 based on dark.css by Ivan Sagalaev
 */
 
-.hljs {
+/*.hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
@@ -112,4 +112,4 @@ based on dark.css by Ivan Sagalaev
 .xml .css,
 .xml .hljs-cdata {
   opacity: 0.5;
-}
+}*/

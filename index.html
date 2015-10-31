@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Empowering Users: Modifying the Admin Experience</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/chief.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -41,340 +41,575 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+					<h1>Empowering Users:<br /><span>Modifying the Admin Experience</span></h1>
+					<h3>WordCamp New York 2015</h3>
+					<p><a href="http://hakim.se">Beth Soderberg</a> | <a href="http://twitter.com/bethsoderberg">@bethsoderberg</a><br />
+							<a href="http://www.agencychief.com">CHIEF</a> | <a href="http://twitter.com/agencychief">@AgencyChief</a><br /><img id="opening-logo" alt="Chief" src="images/logo-white.svg">
 					</p>
+
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
+					<h2>Our Goals:<br /><span>Happy & Empowered Clients</span></h2>
+					<p>This is a client who:</p>
+					<ul>
+						<li>knows how to add content they need to add.</li>
+						<li>knows how to edit existing content.</li>
+						<li>never sees code they don't understand.</li>
+						<li>has full admin access if they ever need it.</li>
+						<li>can't inadvertantly break the website.</li>
+					</ul>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
+					<h2>Our Goals:<br /><span>Client-First Development</span></h2>
+					<p>A development philosophy that incorporates content administration:</p>
+					<ul>
+						<li>automates anything that is automateable.</li>
+						<li>minimizes use of things that confuse clients (e.g. widgets, shortcodes).</li>
+						<li>includes non-theme related functions in plugins, not in theme files.</li>
+						<li>provides inline documentation whenever possible.</li>
+						<li>removes unnecessary admin elements.</li>
+						<li>adds necessary admin elements.</li>
+					</ul>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+					<h2>Helping Users:<br /><span>Change the Default Login URL</span></h2>
+					<!--<p>Why would your average non-technical user be able to remember <code>/wp-login.php?</code></p>-->
+					<p>Add this rewrite rule to the .htaccess file at the root of your site:</p>
+					<pre><code data-trim>
+						RewriteRule ^login$ http://demo:9010/wp-login.php [NC,L]
+					</code></pre>
 				</section>
 
 				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
+					<h2>Helping Users:<br /><span>Making Changes Based on Capability</span></h2>
+					<ul>
+						<li>Sometimes a <code>$capability</code> parameter is available</li>
+						<li>If not, use <code>current_user_can</code></li>
+					</ul>
+					<pre><code data-trim>function kitten_capabilities(){
+  if ( ! current_user_can( 'edit_users' ) ) { // Conditional based on user role
+    // Your code here
   }
+}</code></pre>
+<p><small>Roles and Capabilities: <a href="https://codex.wordpress.org/Roles_and_Capabilities" target="_blank">https://codex.wordpress.org/Roles_and_Capabilities</a></small></p>
+<p><small>Function Reference: <a href="https://codex.wordpress.org/Function_Reference/current_user_can" target=_"blank">https://codex.wordpress.org/Function_Reference/current_user_can</a></small></p>
+				</section>
+
+				<section>
+					<h2>Preventing Tragedy:<br /><span>Disable Theme/Plugin Editing in the Admin</span></h2>
+					<p>Add to your site's wp-config.php file:</p>
+					<pre><code data-trim>
+						define('DISALLOW_FILE_EDIT', true);
+					</code></pre>
+					<p><small>* This snippet will remove the edit options link from the admin menu AND disables editing even if the user goes to the URL <code>/wp-admin/theme-editor.php</code>.</small></p>
+				</section>
+
+				<section>
+					<h2>Preventing Tragedy:<br /><span>Plugins for Non-Theme Functions</span></h2>
+					<ol>
+						<li>Make a directory for your plugin in <code>/wp-content/plugins</code>.</li>
+						<li>Make a <code>.php</code> file in your new directory.</li>
+						<li>Add the below code to initialize your plugin.</li>
+						<li>Add non-theme functions to your new plugin.</li>
+					</ol>
+
+					<pre><code data-trim>
+/* Plugin Name: Plugin for All Cats Are Awesome
+   Plugin URI: http://www.slideshare.net/bethsoderberg
+   Description: This plugin handles non-theme related custom functionality.
+   Author: Beth Soderberg, CHIEF
+   Author URI: http://agencychief.com
+   Version: 1.0 */
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Preventing Tragedy:<br /><span>Disable Deactivation of Vital Plugins</span></h2>
+					<!--<p>Use the <code>plugin_action_links</code> hook to remove "edit" plugin action links from all plugins and "deactivate" links from vital plugins.</p>-->
+					<pre><code data-trim>
+add_filter( 'plugin_action_links', 'kitten_disable_plugin_actions', 10, 4 );
+
+function kitten_disable_plugin_actions( $actions, $plugin_file, $plugin_data, $context ) {
+
+  // removes edit link for all plugins
+  if ( array_key_exists( 'edit', $actions ) )
+    unset( $actions['edit'] );
+
+  // removes deactivate link for selected plugins
+  $plugins = array( 'advanced-custom-fields/acf.php' );
+
+  if ( array_key_exists( 'deactivate', $actions ) && in_array( $plugin_file, $plugins ))
+    unset( $actions['deactivate'] );
+  return $actions;
 }
 					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					<p><small>Filter Reference: <a href="https://codex.wordpress.org/Plugin_API/Filter_Reference/plugin_action_links_%28plugin_file_name%29">https://codex.wordpress.org/Plugin_API/Filter_Reference/plugin_action_links_(plugin_file_name)</a></small></p>
+					<!--slide references:
+					"Disable Theme Deactivation" in this article -> http://premium.wpmudev.org/blog/simplify-wordpress-backend/
+					http://sltaylor.co.uk/blog/disabling-wordpress-plugin-deactivation-theme-changing/-->
 				</section>
 
 				<section>
-					<h2>Marvelous List</h2>
+					<h2>Preventing Tragedy:<br /><span>Disable Deactivation of Vital Plugins</span></h2>
+					<p>Consider disabling:</p>
 					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+						<li>Advanced Custom Fields</li>
+						<li>Site specific plugins</li>
+						<li>Anything else that will cause the structure of the site to break if disabled</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
+					<h2>Simplifying the Dashboard:<br /><span>Removing Dashboard Widgets</span></h2>
+					
+					<pre><code data-trim>
+						function kitten_dashboard_widgets() {
+  remove_meta_box(
+    'dashboard_quick_press', // ID of element to remove
+    'dashboard', // type of screen
+    'side' // context
+  );
+}
+
+add_action( 'wp_dashboard_setup', 'kitten_dashboard_widgets' );</code></pre>
+				<p><small>* Use the screen options to disable these widgets instead of removing them if they might ever be needed.</small></p>
+				<p><small>Function Reference: <a href="https://codex.wordpress.org/Function_Reference/remove_meta_box" target="_blank">https://codex.wordpress.org/Function_Reference/remove_meta_box</a></small></p>
 				</section>
 
 				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
+					<h2>Simplifying the Dashboard:<br /><span>Adding Dashboard Widgets</span></h3>
+					<pre><code data-trim>function kitten_db_widget_content( $post, $callback_args ) {
+  echo "I'm a dashboard widget!"; // widget content
+}
+
+function kitten_add_db_widgets() {
+  wp_add_dashboard_widget(
+    'dashboard_widget', // ID of element
+    'Our Shiny Dashboard Widget', // widget name
+    'kitten_db_widget_content' // callback to function that displays content
+  );
+}
+
+add_action('wp_dashboard_setup', 'kitten_add_db_widgets' );</code></pre>
+					<p><small>Function Reference: <a href="https://codex.wordpress.org/Function_Reference/wp_add_dashboard_widget" target="_blank">https://codex.wordpress.org/Function_Reference/wp_add_dashboard_widget</a></small></p>
+					<p><small>Action Reference: <a href="https://codex.wordpress.org/Plugin_API/Action_Reference/wp_dashboard_setup" target="_blank">https://codex.wordpress.org/Plugin_API/Action_Reference/wp_dashboard_setup</a></small></p>
 				</section>
 
 				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+					<h2>Simplifying the Menu:<br /><span>Removing Top Level Menu Items</span></h2>
+					<pre><code data-trim>
+						function kitten_remove_menus(){
+  remove_menu_page( 'edit.php' );                   // Posts
+  remove_menu_page( 'edit-comments.php' );          // Comments
+  remove_menu_page( 'themes.php' );                 // Appearance
+  remove_menu_page( 'plugins.php' );                // Plugins
+  remove_menu_page( 'users.php' );                  // Users
+  remove_menu_page( 'tools.php' );                  // Tools
+  remove_menu_page( 'options-general.php' );        // Settings          
+}
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
+add_action( 'admin_menu', 'kitten_remove_menus' );
 					</code></pre>
+					<p><small>Function Reference: <a href="https://codex.wordpress.org/Function_Reference/remove_menu_page" target="_blank">https://codex.wordpress.org/Function_Reference/remove_menu_page</a></small></p>
+					<p><small>Action Reference: <a href="https://codex.wordpress.org/Plugin_API/Action_Reference/admin_menu" target="_blank">https://codex.wordpress.org/Plugin_API/Action_Reference/admin_menu</a></small></p>
+					<p><small>Remove ACF Menu Link: <a href="http://www.advancedcustomfields.com/resources/how-to-hide-acf-menu-from-clients/" target="_blank">http://www.advancedcustomfields.com/resources/how-to-hide-acf-menu-from-clients/</a></small></p>
+					<!--<p><small>* Pro tip: rearrange the menu to reflect what your client wants to be able to change on the site using their own words as the labels (posts -> blog posts; media -> images)</small></p>-->
 				</section>
 
 				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
+					<h2>Simplifying the Menu:<br /><span>Removing Second Level Menu Items</span></h2>
+					<pre><code data-trim>function kitten_remove_submenus() {
+  remove_submenu_page( 
+    'index.php', // menu slug
+    'index.php' // submenu slug
+  );
+  remove_submenu_page( 
+    'index.php', 
+    'update-core.php' 
+  );
+}
+
+add_action( 'admin_menu', 'kitten_remove_submenus', 999 );
+					</code></pre>
+					<p><small>Function Reference: <a href="https://codex.wordpress.org/remove_submenu_page" target="_blank">https://codex.wordpress.org/remove_submenu_page</a></small></p>
+					<p><small>Action Reference: <a href="https://codex.wordpress.org/Plugin_API/Action_Reference/admin_menu" target="_blank">https://codex.wordpress.org/Plugin_API/Action_Reference/admin_menu</a></small></p>
+				<!--slide references:
+				https://codex.wordpress.org/remove_submenu_page
+				-->
 				</section>
 
 				<section>
-					<h2>Much more</h2>
+					<h2>Simplifying the Menu:<br /><span>Adding Menu Items</span></h2>
+					<pre><code data-trim>
+					function kitten_add_home_to_menu() {
+  $homepage_id = get_option( 'page_on_front' );
+  add_menu_page(
+    'Homepage', // page title
+    'Homepage', // menu title
+    'edit_pages', // user capability
+    'post.php?post=' . $homepage_id . '&action=edit', // menu slug
+    false, // don't need a callback function since the page already exists
+    'dashicons-admin-home', // menu icon
+    4 // menu position - right below dashboard
+  );
+}
+
+add_action( 'admin_menu', 'kitten_add_home_to_menu' );
+</code></pre>
+				<p><small>Function Reference: <a href="https://codex.wordpress.org/Function_Reference/add_menu_page" target="_blank">https://codex.wordpress.org/Function_Reference/add_menu_page</a></small></p>
+				<!--slide references: 
+				https://codex.wordpress.org/Function_Reference/add_menu_page
+				-->
+				</section>
+
+				<section>
+					<h2>Streamline Editing:<br /><span>Remove the things that will never be used</span></h2>
+					<pre><code data-trim>function kitten_remove_extras() {
+  remove_post_type_support( 
+    'page', // post type
+    'comments' // feature being removed
+  );
+}
+
+add_action( 'init', 'kitten_remove_extras' );</code></pre>
+					<p><small>* You should really do this through screen options in case the user ever DOES need these things</small></p>
+					<p><small>Function Reference: <a href="https://developer.wordpress.org/reference/functions/remove_post_type_support/" target="_blank">https://developer.wordpress.org/reference/functions/remove_post_type_support/</a></small></p>			
+				</section>
+
+				<section>
+					<h2>Streamline Editing:<br /><span>Remove Contextual Help Tab</span></h2>
+					<p>Use inline help or metaboxes instead.</p>
+					<pre><code data-trim>function kitten_remove_contextual_help() {
+  $screen = get_current_screen();
+  $screen->remove_help_tabs();
+}
+
+add_action( 'admin_head', 'kitten_remove_contextual_help' );</code></pre>
+<p><small><a href="https://developer.wordpress.org/reference/classes/wp_screen/remove_help_tabs/" target="_blank">https://developer.wordpress.org/reference/classes/wp_screen/remove_help_tabs/</a></small></p>
+<p><small><a href="https://codex.wordpress.org/Plugin_API/Action_Reference/admin_head" target="_blank">https://codex.wordpress.org/Plugin_API/Action_Reference/admin_head</a></small></p>
+				</section>
+
+				<section>
+					<h2>Streamline Editing:<br /><span>Explain the Featured Image Metabox</span></h2>
+					<!--<p>A lot of people won't know what a featured image is and they may not know where the featured image will show up in their theme.</p>-->
+					<pre><code data-trim>
+					add_filter( 'admin_post_thumbnail_html', 'kitten_explain_featured_image');
+
+function kitten_explain_featured_image( $content ) {
+  return $content .= '<p>The Featured Image will be associated with this content throughout 
+  the website. Click the link above to add or change the image for this post. </p>';
+}</code></pre>
+					<p><small>Code Reference: <a href="https://developer.wordpress.org/reference/hooks/admin_post_thumbnail_html/" target="_blank">https://developer.wordpress.org/reference/hooks/admin_post_thumbnail_html/</a></small></p>
+				<!-- Slide references:
+				https://trepmal.com/2011/03/21/add-or-change-content-in-the-featured-image-meta-box/
+				-->
+				</section>
+
+				<section>
+					<h2>Streamline Editing:<br /><span>Remove Unneeded Editor Options</span></h2>
+					<pre><code data-trim>function kitten_remove_color_button($buttons) {
+  $remove = 'forecolor'; //Remove text color selector
+  
+  if ( ( $key = array_search($remove,$buttons) ) !== false )
+    unset($buttons[$key]); //Find the array key and then unset
+  
+  return $buttons;
+}
+
+add_filter('mce_buttons_2','kitten_remove_color_button');</code></pre>
+<p><small>Filter Reference: <a href="https://codex.wordpress.org/Plugin_API/Filter_Reference/mce_buttons,_mce_buttons_2,_mce_buttons_3,_mce_buttons_4" target="_blank">https://codex.wordpress.org/Plugin_API/Filter_Reference/mce_buttons,_mce_buttons_2,_mce_buttons_3,_mce_buttons_4</a></small></p>
+				</section>
+
+				<section>
+					<h2>Streamline Editing:<br /><span>Add New Editor Styles</span></h2>
+					<p>Reveal the hidden style button:</p>
+					<pre><code data-trim>function kitten_add_style_button($buttons) {
+  array_unshift($buttons, 'styleselect'); //Add style selector to the toolbar
+  return $buttons;
+}
+
+add_filter('mce_buttons_2','kitten_add_style_button');</code></pre>
+<p><small>Filter Reference: <a href="https://codex.wordpress.org/Plugin_API/Filter_Reference/mce_buttons,_mce_buttons_2,_mce_buttons_3,_mce_buttons_4" target="_blank">https://codex.wordpress.org/Plugin_API/Filter_Reference/mce_buttons,_mce_buttons_2,_mce_buttons_3,_mce_buttons_4</a></small></p>
+				</section>
+
+				<section>
+					<h2>Streamline Editing:<br /><span>Add New Editor Styles</span></h2>
+					<p>Add new styles:</p>
+					<pre><code data-trim>
+						function kitten_insert_style_formats( $init_array ) {  
+  $style_formats = array(  
+    array(  
+      'title' => 'Intro', // label 
+      'block' => 'span', // HTML wrapper 
+      'classes' => 'intro', // class
+      'wrapper' => true, // does it have a wrapper?
+    ), // Each array child has it's own settings
+  );  
+  
+  $init_array['style_formats'] = json_encode( $style_formats ); 
+    // Insert array into 'style_formats'
+  
+  return $init_array;  
+} 
+
+add_filter( 'tiny_mce_before_init', 'kitten_insert_style_formats' );</code></pre>
+<p><small>Filter Reference: <a href="https://codex.wordpress.org/Plugin_API/Filter_Reference/tiny_mce_before_init" target="_blank">https://codex.wordpress.org/Plugin_API/Filter_Reference/tiny_mce_before_init</a></small></p>
+</section>
+
+				<section>
+					<h2>Streamline Editing:<br /><span>Add new Quick Tags to the Text Editor</span></h2>
+					<h3></h3>
+					<pre><code data-trim>function kitten_add_quicktags() {
+  if (wp_script_is('quicktags')){
+    ?&gt;
+      <script type="text/javascript">
+        QTags.addButton( 'eg_paragraph', 'p', '<p>', '</p>', 'p', 'Paragraph tag', 1 );
+    	QTags.addButton( 'eg_hr', 'hr', '<hr />', '', 'h', 'Horizontal rule line', 201 );
+    	QTags.addButton( 'eg_pre', 'pre', '<pre lang="php">', '</pre>', 'q', 'Preformatted 
+    	  text tag', 111 );
+      </script>
+    &lt;?php
+  }
+}
+
+add_action( 'admin_print_footer_scripts', 'kitten_add_quicktags' ); </code></pre> 
+<p><small>Code Reference: <a href="https://codex.wordpress.org/Quicktags_API" target="_blank">https://codex.wordpress.org/Quicktags_API</a></small></p>
+				</section>
+
+				<section>
+					<h2>Make Editing the Homepage Easy:<br /><span>Advanced Custom Fields</span></h2>
+					<p>Philosophy for the homepage (and other super special pages):</p>
 					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+						<li>Use a standard page.</li>
+						<li>Use <a href="http://www.advancedcustomfields.com/" target="_blank">Advanced Custom Fields</a> (ACF) to set up editable content.</li>
+						<li>Use ACF tabs to organize fields.</li>
+						<li>Avoid widgets.</li>
+						<li>Pull any dynamic content through the <code>front-page.php</code> template file.</li>
+						<li>Add an edit screen shortcut to the admin sidebar menu.</li>
 					</ul>
+					<p><small>Advanced Custom Fields: <a href="http://www.advancedcustomfields.com/" target="_blank">http://www.advancedcustomfields.com/</a></small></p>
+				</section>
+				
+				<section>
+					<h2>Make Custom Post Types Happy:<br /><span>Set Custom Post Type Labels</span></h2>
+					<pre><code data-trim>
+$labels = array(
+  'name'               => __( 'Cats', 'post type general name' ),
+  'singular_name'      => __( 'Cat', 'post type singular name' ),
+  'menu_name'          => __( 'Cats', 'admin menu' ),
+  'name_admin_bar'     => __( 'Cat', 'add new on admin bar' ),
+  'add_new'            => __( 'Add New', 'cat' ),
+  'add_new_item'       => __( 'Add New Cat' ),
+  'new_item'           => __( 'New Cat' ),
+  'edit_item'          => __( 'Edit Cat' ),
+  'view_item'          => __( 'View Cat' ),
+  'all_items'          => __( 'All Cats' ),
+  'search_items'       => __( 'Search Cats' ),
+  'parent_item_colon'  => __( 'Parent Cats:' ),
+  'not_found'          => __( 'No cats found.' ),
+  'not_found_in_trash' => __( 'No cats found in Trash.' )
+);
+
+					</code></pre>
+					<p><small>Function Reference: <a href="https://codex.wordpress.org/Function_Reference/register_post_type" target="_blank">https://codex.wordpress.org/Function_Reference/register_post_type</a></small></p>
 				</section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
+				<section>
+					<h2>Make Custom Post Types Happy:<br /><span>Replace Title Placeholder Text</span></h2>
+					<pre><code data-trim>function kitten_title_text_input ( $title ) {
+  if ( get_post_type() == 'cats' ) {
+    $title = __( 'Enter cat name here' );
+  }
+  
+  return $title;
+}
+
+add_filter( 'enter_title_here', 'kitten_title_text_input' );</code></pre>
+<p><small>Code Reference: <a href="https://developer.wordpress.org/reference/hooks/enter_title_here/" target="_blank">https://developer.wordpress.org/reference/hooks/enter_title_here/</a></small></p>
+					</section>
+
+				<section>
+					<h2>Make Custom Post Types Happy:<br /><span>Make Menu Links Appear...or Not</span></h2>
+					<ul>
+						<li><code>show_ui</code></li>
+						<li><code>show_in_nav_menus</code></li>
+						<li><code>show_in_menu</code></li>
+						<li><code>show_in_admin_bar</code></li>
+					</ul>
+					<p><small>Function Reference: <a href="https://codex.wordpress.org/Function_Reference/register_post_type" target="_blank">https://codex.wordpress.org/Function_Reference/register_post_type</a></small></p>
+				</section>
+				
+				<!-- Custom Post Type reference
+				https://codex.wordpress.org/Function_Reference/register_post_type
+				-->
+
+				<section>
+					<h2>Make Custom Post Types Happy:<br /><span>Make Menu Links Appear in the Right Order</span></h2>
+					<p>Set <code>menu_position</code> to an integer. Standard menu item defaults are:</p>
+					<div class="left-col">
+						<ul>
+							<li>2 - Dashboard</li>
+							<li>4 - Separator</li>
+							<li>5 - Posts</li>
+							<li>10 - Media</li>
+							<li>15 - Links</li>
+							<li>20 - Pages</li>
+							<li>25 - Comments</li>
+						</ul>
+					</div>
+					<div class="right-col">
+						<ul>
+							<li>59 - Separator</li>
+							<li>60 - Appearance</li>
+							<li>65 - Plugins</li>
+							<li>70 - Users</li>
+							<li>75 - Tools</li>
+							<li>80 - Settings</li>
+							<li>99 - Separator</li>
+						</ul>
+					</div>
+					<p><small>* The default menu placement for custom post types is after "comments."</small></p>
+					<p><small>Function Reference: <a href="https://codex.wordpress.org/Function_Reference/register_post_type" target="_blank">https://codex.wordpress.org/Function_Reference/register_post_type</a></small></p>
+				</section>
+				<section>
+					<h2>Make Custom Post Types Happy:<br /><span>Add a Logical Dashicon</span></h2>
+					<h3>Use a Dashicon</h3>
+					<ol>
+						<li>Choose a <a href="https://developer.wordpress.org/resource/dashicons/#dashboard">Dashicon</a></li>
+						<li>Use the CSS class to set the <code>menu_icon</code>.</li>
+					</ol>
+					<pre><code data-trim>
+						'menu_icon'    => 'dashicons-heart',
+					</code></pre>
+					<h3>Use a Custom Image</h3>
+					<pre><code data-trim>
+						'menu_icon'   => 'http://www.allcatsareawesome.com/wp-content/uploads/2015/10/cat-icon.png',
+					</code></pre>
+					<p><small>Function Reference: <a href="https://codex.wordpress.org/Function_Reference/register_post_type" target="_blank">https://codex.wordpress.org/Function_Reference/register_post_type</a></small></p>
+					<p><small>Dashicons: <a href="https://developer.wordpress.org/resource/dashicons/" target="_blank">https://developer.wordpress.org/resource/dashicons/</a></small></p>
+				<!-- Slide references
+				http://www.wpbeginner.com/wp-tutorials/how-to-add-icons-for-custom-post-types-in-wordpress/
+				https://developer.wordpress.org/resource/dashicons/
+				-->
 				</section>
 
+				<section>
+					<h2>Make Everything On Brand:<br /><span>Create an Admin Theme</span></h2>
+					<h3></h3>
+					<ol>
+						<li>Make a directory for the admin theme in <code>wp-content/plugins</code></li>
+						<li>Add a PHP file that initializes the plugin and enqueues scripts.</li>
+						<li>Add a CSS file for customizations.</li>
+					</ol>
+					<pre><code data-trim>
+/* Plugin Name: Admin Theme for All Cats Are Awesome
+   Plugin URI: http://www.slideshare.net/bethsoderberg
+   Description: This plugin styles the admin panel.
+   Author: Beth Soderberg, CHIEF
+   Author URI: http://agencychief.com
+   Version: 1.0*/
+
+function my_admin_theme_style() {
+  wp_enqueue_style('my-admin-theme', plugins_url('admin-styles.css', __FILE__));
+}
+
+add_action('admin_enqueue_scripts', 'my_admin_theme_style');
+add_action('login_enqueue_scripts', 'my_admin_theme_style');
+</code></pre>
+				<p><small>Code Reference: <a href="https://codex.wordpress.org/Creating_Admin_Themes" target="_blank">https://codex.wordpress.org/Creating_Admin_Themes</a></small></p>
+				<!--slide references: 
+				https://codex.wordpress.org/Creating_Admin_Themes
+				-->
+				</section>
+
+				<section>
+					<h2>Make Everything On Brand:<br /><span>Modify Login Page Styles</span></h2>
+					<p>Use the admin theme stylesheet to override this code block (and anything else!):</p>
+					<pre><code data-trim>.login h1 a {
+  background-image: none, url("../images/wordpress-logo.svg?ver=20131107");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 84px auto;
+  display: block;
+  font-size: 20px;
+  height: 84px;
+  line-height: 1.3em;
+  margin: 0 auto 25px;
+  outline: 0 none;
+  padding: 0;
+  text-indent: -9999px;
+  width: 84px;
+}</code></pre>
+<p><small>Code Reference: <a href="https://codex.wordpress.org/Creating_Admin_Themes" target="_blank">https://codex.wordpress.org/Creating_Admin_Themes</a></small></p>
+
+				</section>
+
+				<section>
+					<h2>Make Everything On Brand:<br /><span>Use JavaScript... Only if you need to.</span></h2>
+					<pre><code data-trim>function my_admin_theme_style() {
+  wp_enqueue_style('my-admin-theme', plugins_url('admin-styles.css', __FILE__));
+  wp_enqueue_script('custom-js', plugins_url('admin-scripts.js', (__FILE__) ) );
+}
+
+add_action('admin_enqueue_scripts', 'my_admin_theme_style');
+add_action('login_enqueue_scripts', 'my_admin_theme_style');</code></pre>
+					<p><small>On Loading Scripts Correctly: <a href="https://pippinsplugins.com/loading-scripts-correctly-in-the-wordpress-admin/" target="_blank">https://pippinsplugins.com/loading-scripts-correctly-in-the-wordpress-admin/</a></small></p>
+				</section>
+
+				<section>
+					<h2>Make Everything On Brand:<br /><span>Modify Footer Branding</span></h2>
+					<p>Replace "Thank you for creating with WordPress":</p>
+					<pre><code data-trim>function kitten_footer_admin () { 
+  echo 'Made for you by <a href="http://agencychief.com">CHIEF</a>'; 
+} 
+ 
+add_filter('admin_footer_text', 'kitten_footer_admin');</code></pre>
+<p>Remove version number:</p>
+<pre><code data-trim>function kitten_footer_admin_right() {
+  remove_filter( 'update_footer', 'core_update_footer' ); 
+}
+
+add_action( 'admin_menu', 'kitten_footer_admin_right' );</code></pre>
+
+<p><small>Hook Reference: <a href="https://developer.wordpress.org/reference/hooks/admin_footer_text/" target="_blank">https://developer.wordpress.org/reference/hooks/admin_footer_text/</a></small></p>
+<p><small>Hook Reference: <a href="https://developer.wordpress.org/reference/hooks/update_footer/" target="_blank">https://developer.wordpress.org/reference/hooks/update_footer/</a></small></p>
+				</section>
+
+
+				<section>
+					<h2>Make Everything On Brand:<br /><span>Remove WordPress Logo From Header</span></h2>
+					<pre><code data-trim>function kitten_remove_admin_logo( $wp_admin_bar ) {
+  $wp_admin_bar->remove_node( 'wp-logo' );
+}
+
+add_action( 'admin_bar_menu', 'kitten_remove_admin_logo', 11 );</code></pre>
+<p><small>Hook Reference: <a href="https://developer.wordpress.org/reference/hooks/admin_bar_menu/" target="_blank">https://developer.wordpress.org/reference/hooks/admin_bar_menu/</a></small></p>
+				</section>
+
+				
+
+				<section>
+					<h1><span>Thank you!</span></h1>
+					<div class="left-col">
+						<h3>Beth</h3>
+						<ul>
+							<li><a href="https://twitter.com/bethsoderberg">twitter.com/bethsoderberg</a></li>
+							<li><a href="http://www.slideshare.net/bethsoderberg">slideshare.net/bethsoderberg</a></li>
+							<li><a href="http://bethsoderberg.com/">bethsoderberg.com</a></li>
+							<li><a href="http://responsivegeometry.com/">responsivegeometry.com</a></li>
+						</ul>
+					</div>
+					<div class="right-col">
+						<h3>CHIEF</h3>
+						<ul>
+							<li><a href="https://twitter.com/agencychief">twitter.com/agencychief</a></li>
+							<li><a href="http://agencychief.com/">agencychief.com</a></li>
+						</ul>
+					</div>
+				</section>
 			</div>
 
 		</div>
@@ -390,7 +625,7 @@ Reveal.addEventListener( 'customevent', function() {
 				controls: true,
 				progress: true,
 				history: true,
-				center: true,
+				center: false,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
