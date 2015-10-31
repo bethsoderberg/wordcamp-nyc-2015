@@ -1,0 +1,10 @@
+body {
+	color: orange;
+}
+
+.login h1 a {
+    background-image: none, url("/wp-content/uploads/2015/10/kittens-in-basket.jpg");
+    background-size: cover;
+    height: 150px;
+    width: 320px;
+}
